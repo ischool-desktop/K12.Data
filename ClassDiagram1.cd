@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="K12.Data.AbsenceMapping" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavior\AbsenceMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AbsenceMappingInfo" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgABAgAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavior\AbsenceMappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Attendance" Collapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEAAgIAABAAAAAAAAUAgAAEACAABBAQAEAQBAAA=</HashCode>
+      <FileName>Behavior\Attendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AttendanceRecord" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgABQQAEAgAAAIEAAAAAAAAAEAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Behavior\AttendanceRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AttendancePeriod" Collapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Behavior\AttendanceRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Demerit" Collapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEAAgCAAFAAAAAAAAUQgAAEACIBABAAAAAQBAAA=</HashCode>
+      <FileName>Behavior\Demerit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.DemeritRecord" Collapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgACQQCAAgEIAIEAAAACAAAgEAAAAAIAAAAAEAAA=</HashCode>
+      <FileName>Behavior\DemeritRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Discipline" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEAAoAAAFAAAAAAAAUQAAAEACAAABAAAAAQBAAA=</HashCode>
+      <FileName>Behavior\Discipline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.DisciplineRecord" Collapsed="true">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgACQQCAAgEIAIEAACACAAAgEAAAAAIAAAAAEAAA=</HashCode>
+      <FileName>Behavior\DisciplineRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Merit" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEAAgCAAFAAAAAAAAUQgAAEACIAABAAAAAQBAAA=</HashCode>
+      <FileName>Behavior\Merit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.MeritRecord" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQQCAAgEIAIEAACAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavior\MeritRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.PeriodMapping" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Behavior\PeriodMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.PeriodComparer&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Behavior\PeriodMapping.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.PeriodMappingInfo" Collapsed="true">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAAAAAAAAAAAAQAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Behavior\PeriodMappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Class" Collapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAcgAEQAACAgBEAAAAAAIEAAAAEACAABAAIAAIQBAAA=</HashCode>
+      <FileName>Class.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ClassRecord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEMAwCAAAEAAgAQABAAAAARIAQAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ClassRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.CompareClassRecordEventArgs" Collapsed="true">
+    <Position X="27.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ClassRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ClassTag" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUgAEACACAABAAAAAAAIUAAAAEACAAAAAIAAAQBAAA=</HashCode>
+      <FileName>ClassTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ClassTagRecord" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAgAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassTagRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Course" Collapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAcgAEQAACAABAAAAAAAIEAgAAEADAABABIAAAQBAgA=</HashCode>
+      <FileName>Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.CourseRecord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEgAAABAEAgASBIMIAQAQAAgCAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>CourseRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.CompareCourseRecordEventArgs" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>CourseRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.CourseTag" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUgAEAAACAABAAAAAAAIUAAAAEACAAAAAIACEQBAAA=</HashCode>
+      <FileName>CourseTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.CourseTagRecord" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAgAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CourseTagRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AEInclude" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEQAACAABAAAAAAAAUAAAAEACAAAAAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\AEInclude.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AEIncludeRecord" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAACAAAAgAAAAAAAABAAICAgAARAAAARgEAAAAA=</HashCode>
+      <FileName>Evaluation\AEIncludeRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AssessmentSetup" Collapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAEQAACAABAAAAAAAAUAAAAEACAAAAAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\AssessmentSetup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AssessmentSetupRecord" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAEggAAAAAAAAAQAIAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Evaluation\AssessmentSetupRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Exam" Collapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAEQAACAABAAAAAAAAUAAAAEACAAAAAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\Exam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ExamRecord" Collapsed="true">
+    <Position X="15.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwAAAAAAggAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Evaluation\ExamRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.GradScore" Collapsed="true">
+    <Position X="22.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAAQAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Evaluation\GradScore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.GradScoreRecord" Collapsed="true">
+    <Position X="24" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQQAAAAAAAAAAAAAAAACAAAAAAIAAAQAAAAAA=</HashCode>
+      <FileName>Evaluation\GradScoreRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.GradDomainScore" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAgAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Evaluation\GradScoreRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.MoralScore" Collapsed="true">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEAAACAABAAAAAAAAUAgAAEACAAABAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\MoralScore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.MoralScoreRecord" Collapsed="true">
+    <Position X="17" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAUQAAAgAAAIEAAAAAAAAAQAAKAAAAAAAgAAAA=</HashCode>
+      <FileName>Evaluation\MoralScoreRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ProgramPlan" Collapsed="true">
+    <Position X="20.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAEQAACAABAAAAAAAAUAAAAEACAAAAAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\ProgramPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ProgramPlanRecord" Collapsed="true">
+    <Position X="22.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Evaluation\ProgramPlanRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ProgramSubject" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAIABIAAAAAAAAiAAAAABgAAAACAAABI=</HashCode>
+      <FileName>Evaluation\ProgramPlanRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.SCAttend" Collapsed="true">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAEQAACAABAAAAAAAAUAAAAEACAAABBAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\SCAttend.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SCAttendRecord" Collapsed="true">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAQQAEAgAiAAIAAAJAACAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Evaluation\SCAttendRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SCETake" Collapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQgAEQAACBABAAAAAAAAUAAAAEACAAABAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\SCETake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SCETakeRecord" Collapsed="true">
+    <Position X="15.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAAQQAAAgAgAAIAAAJAAAAAAAABAAAAQCIAAAAA=</HashCode>
+      <FileName>Evaluation\SCETakeRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ScoreCalcRule" Collapsed="true">
+    <Position X="22.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAEQAACAABAAAAAAAAUAAAAEACAAAAAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\ScoreCalcRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ScoreCalcRuleRecord" Collapsed="true">
+    <Position X="24" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAgAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Evaluation\ScoreCalcRuleRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SemesterScore" Collapsed="true">
+    <Position X="11.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAEAAAAAABAAAAAAAAEAgAAEACAABBAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\SemesterScore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SemesterScoreRecord" Collapsed="true">
+    <Position X="13.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAQQEAAgAAAIEAAAAAAACAAAAAAIAAAQAAAAAA=</HashCode>
+      <FileName>Evaluation\SemesterScoreRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SubjectScore" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgBAIAAABAAAgAAAAAAAAAACAAAABI=</HashCode>
+      <FileName>Evaluation\SemesterScoreRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.DomainScore" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgBAAAAABAAAgAAAAAAAAAACAAAABI=</HashCode>
+      <FileName>Evaluation\SemesterScoreRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.TCInstruct" Collapsed="true">
+    <Position X="10" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAEQAACAABAAAAAAAAEAAAAEACAABAAAAAAQBAAA=</HashCode>
+      <FileName>Evaluation\TCInstruct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.TCInstructRecord" Collapsed="true">
+    <Position X="11.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAgAAAAAAAgAAAAIAAAIAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Evaluation\TCInstructRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.GeneralTagRecord" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAgIAAAAAAgAwCAAAAAAAAAAAAoQAAAAA=</HashCode>
+      <FileName>GeneralTagRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="K12.Data.Address" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAAAAAAAAAAAAAAAAAEAAAAAAAAABBAAAAAQAAAA=</HashCode>
+      <FileName>Permrec\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AddressRecord" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAgAAQQAAAAAABAAAEAAAAAAAAAQAAAAAAEAAAAAA=</HashCode>
+      <FileName>Permrec\AddressRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AddressItem" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAkAAAAAEAAAIAAQAAAAAAAABAAAAAQAACAA=</HashCode>
+      <FileName>Permrec\AddressRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.BeforeEnrollment" Collapsed="true">
+    <Position X="15.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Permrec\BeforeEnrollment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.LeaveInfo" Collapsed="true">
+    <Position X="27.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAAAAAAAAAAAAAAAAAEABAAAAAAABBAAAAAQAAAA=</HashCode>
+      <FileName>Permrec\LeaveInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.LeaveInfoRecord" Collapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQQACEAAIAAEAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Permrec\LeaveInfoRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Parent" Collapsed="true">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAAAAAAAAAAAAAAAAAEAAAIAAAAABBAAAAAQAABA=</HashCode>
+      <FileName>Permrec\Parent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ParentRecord" Collapsed="true">
+    <Position X="24" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQQAAACAAAAAAAAAAAAAAAIAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Permrec\ParentRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.ParentBase" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAQAAACCAAAAAAAAIAAACAA=</HashCode>
+      <FileName>Permrec\ParentRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Father" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Permrec\ParentRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Mother" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Permrec\ParentRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Custodian" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Permrec\ParentRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Phone" Collapsed="true">
+    <Position X="13.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAAAAAAAAAAAAAAAAAEAAAAAAAAABBAAAAAQAAAA=</HashCode>
+      <FileName>Permrec\Phone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.PhoneRecord" Collapsed="true">
+    <Position X="15.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQQAAAAAAACABAAAAAAAAAAQAAAAAAIAAAAAA=</HashCode>
+      <FileName>Permrec\PhoneRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Photo" Collapsed="true">
+    <Position X="17" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAAAAAAAAAIABAAAAAEAAAAAAAAAgAAAAAAQAAAA=</HashCode>
+      <FileName>Permrec\Photo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SchoolHoliday" Collapsed="true">
+    <Position X="18.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAACAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Permrec\SchoolHoliday.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SchoolHolidayRecord" Collapsed="true">
+    <Position X="20.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMEAAgABAAAAIQAAAAAAcgAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Permrec\SchoolHolidayRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Town" Collapsed="true">
+    <Position X="18.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABIACAAAAAAAAAAAAAAAAAAAAAIAAkAAAiAACA=</HashCode>
+      <FileName>Permrec\Town.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.TownRecord" Collapsed="true">
+    <Position X="20.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAQAAAAAAAABAAAAAQAAAAA=</HashCode>
+      <FileName>Permrec\TownRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.UpdateRecord" Collapsed="true">
+    <Position X="24" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAEAAACAAAAQAEAAAAAAAQQEBCAABBAAAAAABgAA=</HashCode>
+      <FileName>Permrec\UpdateRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.UpdateRecordRecord" Collapsed="true">
+    <Position X="25.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAEQUAgwECAIEAAAAQQEQAAAAAAQAAEAAgCAAA=</HashCode>
+      <FileName>Permrec\UpdateRecordRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.School" Collapsed="true">
+    <Position X="17" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAIAgBCEACgIECAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SemesterHistory" Collapsed="true">
+    <Position X="25.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQgAAAAAAAAAAAAAAAQAAABAAAAAAABBAAAEAAAAAA=</HashCode>
+      <FileName>SemesterHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SemesterHistoryRecord" Collapsed="true">
+    <Position X="10" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQQAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SemesterHistoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.SemesterHistoryItem" Collapsed="true">
+    <Position X="27.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAgAAAAEGAAAAAIEAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SemesterHistoryRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Student" Collapsed="true">
+    <Position X="18.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAcgAEQAACAAJAAACAQAIEAAAAEBCAAhQAIAAAQBAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.StudentRecord" Collapsed="true">
+    <Position X="20.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgOEEAAEAwACAAAoIQAQAAAAIAAAAABAIAgAACAA=</HashCode>
+      <FileName>StudentRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.StudentTag" Collapsed="true">
+    <Position X="22.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUgAEAAACAABAAAAAAAIUAAAAEACAAABAIAAAQBAAA=</HashCode>
+      <FileName>StudentTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.StudentTagRecord" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StudentTagRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.TagConfig" Collapsed="true">
+    <Position X="25.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAcgAEQgACAABAAIAAAAIUAAAAEACAAAAAIAAASBAAA=</HashCode>
+      <FileName>TagConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.TagConfigRecord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAgYQAAEAAAAQCAAAAAAAAAAAAgAAACAA=</HashCode>
+      <FileName>TagConfigRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.Teacher" Collapsed="true">
+    <Position X="13.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAcgAEQAACAABAAACAAAIEAAAAkECQABAAIAAAQBAAA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.TeacherRecord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFgAAEAAAAwASAAAAAAAQAAAAAAAAAAAAIAAAACAA=</HashCode>
+      <FileName>TeacherRecord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.CompareTeacherRecordEventArgs" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>TeacherRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.TeacherTag" Collapsed="true">
+    <Position X="17" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUgAEAAACAABAAAAAAAIUAAAAEACgAAAAIAAAQBAAA=</HashCode>
+      <FileName>TeacherTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.TeacherTagRecord" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TeacherTagRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.AttendancePeriodList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGIAAEAAAAAAABGQCAAABAQAAAAAAAAACAAAAABQIAA=</HashCode>
+      <FileName>Utility\AttendancePeriodList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.AutoDictionary" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAAAAAECBAEiAAABAQAAAAAAAAAAAIoAAAAABA=</HashCode>
+      <FileName>Utility\AutoDictionary.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.DataChangedEventArgs" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\DataChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.DateTimeHelper" Collapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAABAAAAAAAAAEAAAEQAAAAEBAABAAAAAAACAAAA=</HashCode>
+      <FileName>Utility\DateTimeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.DateTimePaddingInfo" Collapsed="true">
+    <Position X="15.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAIAAAAABAAABAAAAAACAAAAAABAAAAAgAIAA=</HashCode>
+      <FileName>Utility\DateTimePaddingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Decimal" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Utility\Deciaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.EntityCache&lt;T&gt;" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAABAAAAABAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Utility\EntityCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.CacheSet&lt;T&gt;" Collapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\EntityCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Int" Collapsed="true">
+    <Position X="25.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Utility\Int.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.MultiThreadWorker&lt;T&gt;" Collapsed="true">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBQAAAAAAAAAQAQAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Utility\MultiThreadWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.PackageWorkEventArgs&lt;T&gt;" Collapsed="true">
+    <Position X="20.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAQAAAAAAACAMABAAAAgCAI=</HashCode>
+      <FileName>Utility\MultiThreadWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.PatternMatcher" Collapsed="true">
+    <Position X="25.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAADAAgAAACAAAAAEAAABAAAAAAAIAA=</HashCode>
+      <FileName>Utility\PatternMatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.PhotoUtil" Collapsed="true">
+    <Position X="18.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAAAAgEAAAAAAAAIAAAAAAAAAAAAAQAEAAAA=</HashCode>
+      <FileName>Utility\PhotoUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.StringComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAABAAAAAAQA=</HashCode>
+      <FileName>Utility\StringComparer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.XmlHelper" Collapsed="true">
+    <Position X="10" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAKBogAAAAiQYCkAAAABAQAAAgBAAAAABAEAIAIIBA=</HashCode>
+      <FileName>Utility\XmlHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.Behavior_Extends" Collapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Configuration\Behavior_Extends.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.BigEvent" Collapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgAAAAABAAIAAAAAAAAAAAIQAAIAAICAAAAIICAA=</HashCode>
+      <FileName>Configuration\BigEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.RaiseEventException" Collapsed="true">
+    <Position X="25.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\BigEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.CacheManager&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAEBEACACASggAAAIIIQqJIABAACIAAAEAAAA=</HashCode>
+      <FileName>Configuration\CacheManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.ConfigData" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAIAQAAAAIBCACAACAAQAAAAAJAAAAAAAAAAQBAA=</HashCode>
+      <FileName>Configuration\ConfigData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.Configuration.ConfigProvider_App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAQAAAAAAAAAAACAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\ConfigProvider_App.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.Configuration.ConfigProvider_Global" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAQAAAEAAIAAAACAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\ConfigProvider_Global.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.Configuration.ConfigProvider_User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAQAAAAAAAAAAACAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\ConfigProvider_User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K12.Data.Configuration.Configuration_ExtendMethods" Collapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\Configuration_ExtendMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.ConfigurationCache" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAEAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Configuration\ConfigurationCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.ConfigurationManager" Collapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAEAACACAAIBAAAAAAAEAAAAABAAAAAAAA=</HashCode>
+      <FileName>Configuration\ConfigurationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.ConfigurationRecord" Collapsed="true">
+    <Position X="24" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQAAAAAAAIAAAAAAAAAAAAIAAIAAAECAAAABA=</HashCode>
+      <FileName>Configuration\ConfigurationRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.ExceptionReport" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAgAAAAAAAAAAQAAAEAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\ExceptionReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.ExtraInformation" Collapsed="true">
+    <Position X="18.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\ExtraInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Configuration.Typed_Extends" Collapsed="true">
+    <Position X="22.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAEAAIAAAAAAAAAAAAAAAAAIABAAAAAIAAA=</HashCode>
+      <FileName>Configuration\Typed_Extends.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Properties.Resources" Collapsed="true">
+    <Position X="27.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Properties.Settings" Collapsed="true">
+    <Position X="15.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Utility.DSAServices" Collapsed="true">
+    <Position X="27.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACQAAAAIARAAAIIgAAAAAAAAAAAAQAAAAAAhAAA=</HashCode>
+      <FileName>Utility\DSAServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Utility.EntityHelper" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Utility\EntityHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K12.Data.Utility.Utility" Collapsed="true">
+    <Position X="27.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="K12.Data.IXmlTransform" Collapsed="true">
+    <Position X="13.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\IXmlTransform.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="K12.Data.Configuration.IConfigurationProvider" Collapsed="true">
+    <Position X="10" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\IConfigurationProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="K12.Data.Configuration.IExtraProcesser" Collapsed="true">
+    <Position X="11.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\IExtraProcesser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="K12.Data.TagCategory" Collapsed="true">
+    <Position X="15.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAQAAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TagConfig.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="K12.Data.ChangedSource" Collapsed="true">
+    <Position X="10" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\DataChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="K12.Data.PaddingMethod" Collapsed="true">
+    <Position X="13.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAAACAAEAAAA=</HashCode>
+      <FileName>Utility\PaddingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="K12.Data.DateTimeField" Collapsed="true">
+    <Position X="11.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAAAAAAAAAIAAAAAACIEAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\PatternMatcher.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="新細明體" Size="9" />
+</ClassDiagram>
