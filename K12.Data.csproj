@@ -65,31 +65,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FISCA">
-      <HintPath>..\..\ischoolteam\FiscaRuntime\kernel\FISCA.dll</HintPath>
+      <HintPath>lib\FISCA.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Authentication">
-      <HintPath>..\..\ischoolteam\FiscaRuntime\kernel\FISCA.Authentication.dll</HintPath>
+      <HintPath>lib\FISCA.Authentication.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Data">
-      <HintPath>..\..\ischoolteam\FiscaRuntime\kernel\FISCA.Data.dll</HintPath>
+      <HintPath>lib\FISCA.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.DSAClient">
-      <HintPath>..\..\ischoolteam\FiscaRuntime\kernel\FISCA.DSAClient.dll</HintPath>
+      <HintPath>lib\FISCA.DSAClient.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FISCA.DSAUtil">
-      <HintPath>..\..\ischoolteam\FiscaRuntime\kernel\FISCA.DSAUtil.dll</HintPath>
+      <HintPath>lib\FISCA.DSAUtil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Permission">
-      <HintPath>..\..\ischoolteam\FiscaRuntime\kernel\FISCA.Permission.dll</HintPath>
+      <HintPath>lib\FISCA.Permission.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Synchronization">
-      <HintPath>..\..\ischoolteam\FiscaRuntime\kernel\FISCA.Synchronization.dll</HintPath>
+      <HintPath>lib\FISCA.Synchronization.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
