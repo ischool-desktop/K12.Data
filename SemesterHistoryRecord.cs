@@ -105,7 +105,9 @@ namespace K12.Data
             ClassName = data.GetAttribute("ClassName");
             SeatNo = K12.Data.Int.ParseAllowNull(data.GetAttribute("SeatNo"));
             SchoolDayCount = K12.Data.Int.ParseAllowNull(data.GetAttribute("SchoolDayCount"));
-            Teacher = data.GetAttribute("Teacher"); 
+            Teacher = data.GetAttribute("Teacher");
+            // 高中 科別名稱
+            DeptName = data.GetAttribute("DeptName"); 
         }
 
         /// <summary>
@@ -153,9 +155,15 @@ namespace K12.Data
         [Field(Caption = "上課天數", EntityName = "SemesterHistoryItem", EntityCaption = "學期歷程")]
         public int? SchoolDayCount { get; set; }
         /// <summary>
-        /// 該學年度學習班導師
+        /// 該學年度學期班導師
         /// </summary>
-        [Field(Caption = "班導師", EntityName = "SemesterHistoryItem", EntityCaption = "學期歷程", Remark = "該學年度學習班導師")]
+        [Field(Caption = "班導師", EntityName = "SemesterHistoryItem", EntityCaption = "學期歷程", Remark = "該學年度學期班導師")]
         public string Teacher { get; set; }
+
+        /// <summary>
+        /// 該學年度學期科別名稱
+        /// </summary>
+        [Field(Caption = "科別名稱", EntityName = "SemesterHistoryItem", EntityCaption = "學期歷程", Remark = "該學年度學期科別名稱")]
+        public string DeptName { get; set; }
     }
 }
