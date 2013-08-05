@@ -109,6 +109,6 @@ namespace K12.Data
         /// 離校時的科別
         /// </summary>
         [Field(Caption = "科別名稱",EntityName ="LeaveInfo",EntityCaption ="離校")]
-        protected internal string DepartmentName { get; set; }
+        public string DepartmentName { get; set; }
     }
 }
