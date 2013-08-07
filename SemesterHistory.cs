@@ -353,6 +353,7 @@ namespace K12.Data
                         Elm.SetAttribute("SchoolDayCount", K12.Data.Int.GetString(item.SchoolDayCount));
                         Elm.SetAttribute("Semester", K12.Data.Int.GetString(item.Semester));
                         Elm.SetAttribute("Teacher",item.Teacher);
+                        Elm.SetAttribute("DeptName", item.DeptName);
                     }
                         
                     updateHelper.AddElement("Student", "Condition");
