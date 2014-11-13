@@ -441,6 +441,9 @@ namespace K12.Data
                         element.SetAttribute("努力程度", "" + subject.Effort);
                         element.SetAttribute("文字描述", "" + subject.Text);
                         element.SetAttribute("註記", "" + subject.Comment);
+                        element.SetAttribute("GPA", "" + subject.GPA);
+                        element.SetAttribute("Level", "" + subject.Level);
+                        element.SetAttribute("Type", "" + subject.Type);
                     }
 
                     partialInsertHelper.AddElement("ScoreInfo", "Domains");
@@ -459,6 +462,9 @@ namespace K12.Data
 
                     partialInsertHelper.AddElement("ScoreInfo", "LearnDomainScore", "" + editor.LearnDomainScore);
                     partialInsertHelper.AddElement("ScoreInfo", "CourseLearnScore", "" + editor.CourseLearnScore);
+                    partialInsertHelper.AddElement("ScoreInfo", "AvgScore", "" + editor.AvgScore);
+                    partialInsertHelper.AddElement("ScoreInfo", "AvgGPA", "" + editor.AvgGPA);
+                    partialInsertHelper.AddElement("ScoreInfo", "CumulateGPA", "" + editor.CumulateGPA);
 
                     helper.AddElement(".", partialInsertHelper.BaseElement);
                 }
@@ -551,7 +557,9 @@ namespace K12.Data
                         element.SetAttribute("努力程度", "" + subject.Effort);
                         element.SetAttribute("文字描述", "" + subject.Text);
                         element.SetAttribute("註記", "" + subject.Comment);
-
+                        element.SetAttribute("GPA", "" + subject.GPA);
+                        element.SetAttribute("Level", "" + subject.Level);
+                        element.SetAttribute("Type", "" + subject.Type);
                     }
 
                     partialUpdateHelper.AddElement("Field/ScoreInfo", "Domains");
@@ -570,6 +578,9 @@ namespace K12.Data
 
                     partialUpdateHelper.AddElement("Field/ScoreInfo", "LearnDomainScore", "" + editor.LearnDomainScore);
                     partialUpdateHelper.AddElement("Field/ScoreInfo", "CourseLearnScore", "" + editor.CourseLearnScore);
+                    partialUpdateHelper.AddElement("Field/ScoreInfo", "AvgScore", "" + editor.AvgScore);
+                    partialUpdateHelper.AddElement("Field/ScoreInfo", "AvgGPA", "" + editor.AvgGPA);
+                    partialUpdateHelper.AddElement("Field/ScoreInfo", "CumulateGPA", "" + editor.CumulateGPA);
 
                     partialUpdateHelper.AddElement("Condition");
                     partialUpdateHelper.AddElement("Condition", "ID", editor.ID);

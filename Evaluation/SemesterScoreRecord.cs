@@ -46,6 +46,18 @@ namespace K12.Data
         /// </summary>
         protected internal decimal? LearnDomainScore { get; set; }
         /// <summary>
+        /// 實中學期平均成績
+        /// </summary>
+        public decimal? AvgScore { get; set; }
+        /// <summary>
+        /// 實中學期平均成績GPA
+        /// </summary>
+        public decimal? AvgGPA { get; set; }
+        /// <summary>
+        /// 實中學期累計成績GPA
+        /// </summary>
+        public decimal? CumulateGPA { get; set; }
+        /// <summary>
         /// 學期科目成績明細
         /// </summary>
         public Dictionary<string, SubjectScore> Subjects { get; set; }
@@ -115,6 +127,9 @@ namespace K12.Data
             GradeYear = helper.GetInteger("GradeYear", 0);
             LearnDomainScore = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/LearnDomainScore"));
             CourseLearnScore = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/CourseLearnScore"));
+            AvgScore = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/AvgScore"));
+            AvgGPA = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/AvgGPA"));
+            CumulateGPA = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/CumulateGPA"));
 
             Subjects = new Dictionary<string, SubjectScore>();
             foreach (var subjectElement in helper.GetElements("ScoreInfo/SemesterSubjectScoreInfo/Subject"))
@@ -215,6 +230,21 @@ namespace K12.Data
         /// </summary>
         [Field(Caption = "註解", EntityName = "SubjectScore", EntityCaption = "科目成績")]
         public string Comment { get; set; }
+        /// <summary>
+        /// GPA
+        /// </summary>
+        [Field(Caption = "GPA", EntityName = "SubjectScore", EntityCaption = "科目成績")]
+        public decimal? GPA { get; set; }
+        /// <summary>
+        /// Type
+        /// </summary>
+        [Field(Caption = "Type", EntityName = "SubjectScore", EntityCaption = "科目成績")]
+        public string Type { get; set; }
+        /// <summary>
+        /// Level
+        /// </summary>
+        [Field(Caption = "Level", EntityName = "SubjectScore", EntityCaption = "科目成績")]
+        public int? Level { get; set; }
 
         /// <summary>
         /// 預設建構式
@@ -247,6 +277,9 @@ namespace K12.Data
             Effort = K12.Data.Int.ParseAllowNull(subject.GetAttribute("努力程度"));
             Text = subject.GetAttribute("文字描述");
             Comment = subject.GetAttribute("註記");
+            GPA = K12.Data.Decimal.ParseAllowNull(subject.GetAttribute("GPA"));
+            Level = K12.Data.Int.ParseAllowNull(subject.GetAttribute("Level"));
+            Type = subject.GetAttribute("Type");
         }
 
         #region ICloneable 成員
@@ -266,6 +299,9 @@ namespace K12.Data
             cloneSubjectScore.Effort = this.Effort;
             cloneSubjectScore.Text = this.Text;
             cloneSubjectScore.Comment = this.Comment;
+            cloneSubjectScore.GPA = this.GPA;
+            cloneSubjectScore.Level = this.Level;
+            cloneSubjectScore.Type = this.Type;
             return cloneSubjectScore;
         }
 
