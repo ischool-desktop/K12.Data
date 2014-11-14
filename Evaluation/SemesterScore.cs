@@ -14,7 +14,7 @@ namespace K12.Data
         private const string SELECT_SERVICENAME = "SmartSchool.Score.GetSemesterSubjectScore";
         private const string UPDATE_SERVICENAME = "SmartSchool.Score.UpdateSemesterSubjectScore";
         private const string INSERT_SERVICENAME = "SmartSchool.Score.InsertSemesterSubjectScore";
-        private const string DELET_SERVICENAME = "SmartSchool.Score.DeleteSemesterSubjectScore";
+        private const string DELET_SERVICENAME = "SmartSchool.Score.DeleteSemesterSubjectScore"; 
 
         /// <summary>
         /// 取得所有科目成績
@@ -30,7 +30,7 @@ namespace K12.Data
             foreach (SemesterScoreRecord Record in Records)
                 foreach (SubjectScore Subject in Record.Subjects.Values)
                     Subjects.Add(Subject);
-            return Subjects; 
+            return Subjects;
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace K12.Data
             {
                 T Type = new T();
                 Type.Load(element);
-                Types.Add(Type); 
+                Types.Add(Type);
             }
 
             return Types;
@@ -107,7 +107,7 @@ namespace K12.Data
         ///     SemesterScoreRecord rerecord = SelectBySchoolYearAndSemester&lt;K12.Data.SemesterScoreRecord&gt;(StudentID,SchoolYear,Semester);
         /// </example>
         [FISCA.Authentication.AutoRetryOnWebException()]
-        protected static T SelectBySchoolYearAndSemester<T>(string StudentID, int SchoolYear, int Semester) where T:SemesterScoreRecord,new()
+        protected static T SelectBySchoolYearAndSemester<T>(string StudentID, int SchoolYear, int Semester) where T : SemesterScoreRecord, new()
         {
             DSXmlHelper helper = new DSXmlHelper("GetSemesterSubjectScore");
             helper.AddElement("Field");
@@ -119,7 +119,7 @@ namespace K12.Data
             helper.AddElement("Field", "ScoreInfo");
             helper.AddElement("Condition");
             helper.AddElement("Condition", "StudentIDList");
-            helper.AddElement("Condition/StudentIDList", "ID", StudentID); 
+            helper.AddElement("Condition/StudentIDList", "ID", StudentID);
             helper.AddElement("Condition", "SchoolYear", K12.Data.Int.GetString(SchoolYear));
             helper.AddElement("Condition", "Semester", K12.Data.Int.GetString(Semester));
 
@@ -171,7 +171,7 @@ namespace K12.Data
         ///     List&lt;SemesterScoreRecord&gt; records = SemesterScore.SelectBySchoolYearAndSemester&lt;K12.Data.SemesterScoreRecord&gt;(StudentIDs,SchoolYear,Semester);
         /// </example>
         [FISCA.Authentication.AutoRetryOnWebException()]
-        protected static List<T> SelectBySchoolYearAndSemester<T>(IEnumerable<string> StudentIDs, int? SchoolYear, int? Semester) where T:SemesterScoreRecord,new()
+        protected static List<T> SelectBySchoolYearAndSemester<T>(IEnumerable<string> StudentIDs, int? SchoolYear, int? Semester) where T : SemesterScoreRecord, new()
         {
             DSXmlHelper helper = new DSXmlHelper("GetSemesterSubjectScore");
             helper.AddElement("Field");
@@ -186,9 +186,9 @@ namespace K12.Data
             foreach (var each in StudentIDs)
                 helper.AddElement("Condition/StudentIDList", "ID", each);
 
-            if (SchoolYear!=null)
+            if (SchoolYear != null)
                 helper.AddElement("Condition", "SchoolYear", K12.Data.Int.GetString(SchoolYear));
-            if (Semester!=null)
+            if (Semester != null)
                 helper.AddElement("Condition", "Semester", K12.Data.Int.GetString(Semester));
 
             DSResponse rsp = DSAServices.CallService(SELECT_SERVICENAME, new DSRequest(helper));
@@ -234,7 +234,7 @@ namespace K12.Data
         ///     List&lt;SemesterScoreRecord&gt; records = SemesterScore.SelectByStudentIDs&lt;K12.Data.SemesterScoreRecord&gt;(StudentIDs);
         /// </example>
         [FISCA.Authentication.AutoRetryOnWebException()]
-        protected static List<T> SelectByStudentIDs<T>(IEnumerable<string> StudentIDs) where T:SemesterScoreRecord,new()
+        protected static List<T> SelectByStudentIDs<T>(IEnumerable<string> StudentIDs) where T : SemesterScoreRecord, new()
         {
             DSXmlHelper helper = new DSXmlHelper("GetSemesterSubjectScore");
             helper.AddElement("Field");
@@ -292,7 +292,7 @@ namespace K12.Data
         /// <example>
         ///     List&lt;SemesterScoreRecord&gt; records = SemesterScore.SelectByStudents&lt;K12.Data.SemesterScoreRecord&gt;(Students);
         /// </example>
-        protected static List<T> SelectByStudents<T>(IEnumerable<StudentRecord> Students) where T:SemesterScoreRecord,new()
+        protected static List<T> SelectByStudents<T>(IEnumerable<StudentRecord> Students) where T : SemesterScoreRecord, new()
         {
             List<string> Keys = new List<string>();
 
@@ -331,7 +331,7 @@ namespace K12.Data
         /// <example>
         ///     List&lt;SemesterScoreRecord&gt; records = SemesterScore.SelectByStudentID&lt;K12.Data.SemesterScoreRecord&gt;(StudentID);
         /// </example>
-        protected static List<T> SelectByStudentID<T>(string StudentID) where T:SemesterScoreRecord,new()
+        protected static List<T> SelectByStudentID<T>(string StudentID) where T : SemesterScoreRecord, new()
         {
             List<string> Params = new List<string>();
 
@@ -369,7 +369,7 @@ namespace K12.Data
         /// <example>
         ///     List&lt;SemesterScoreRecord&gt; records = SemesterScore.SelectByStudent&lt;K12.Data.SemesterScoreRecord&gt;(Student);
         /// </example>
-        protected static List<T> SelectByStudent<T>(StudentRecord Student) where T:SemesterScoreRecord , new()
+        protected static List<T> SelectByStudent<T>(StudentRecord Student) where T : SemesterScoreRecord, new()
         {
             List<StudentRecord> Params = new List<StudentRecord>();
 
@@ -452,6 +452,8 @@ namespace K12.Data
                         element.SetAttribute("節數", "" + domain.Period);
                         element.SetAttribute("權數", "" + domain.Credit);
                         element.SetAttribute("成績", "" + domain.Score);
+                        element.SetAttribute("原始成績", "" + domain.ScoreOrigin);
+                        element.SetAttribute("補考成績", "" + domain.ScoreMakeup);
                         element.SetAttribute("努力程度", "" + domain.Effort);
                         element.SetAttribute("文字描述", "" + domain.Text);
                         element.SetAttribute("註記", "" + domain.Comment);
@@ -505,7 +507,7 @@ namespace K12.Data
         /// <summary>
         /// 更新多筆學生學期成績記錄
         /// </summary>
-        /// <param name="SemesterScoreRecords">多筆學生學期成績記錄</param> 
+        /// <param name="semesterScoreRecords">多筆學生學期成績記錄</param> 
         /// <returns>int，傳回成功更新的筆數。</returns>
         /// <seealso cref="SemesterScoreRecord"/>
         /// <exception cref="Exception">
@@ -563,6 +565,8 @@ namespace K12.Data
                         element.SetAttribute("節數", "" + domain.Period);
                         element.SetAttribute("權數", "" + domain.Credit);
                         element.SetAttribute("成績", "" + domain.Score);
+                        element.SetAttribute("原始成績", "" + domain.ScoreOrigin);
+                        element.SetAttribute("補考成績", "" + domain.ScoreMakeup);
                         element.SetAttribute("努力程度", "" + domain.Effort);
                         element.SetAttribute("文字描述", "" + domain.Text);
                         element.SetAttribute("註記", "" + domain.Comment);
@@ -612,7 +616,7 @@ namespace K12.Data
         /// <summary>
         /// 刪除單筆學生學期成績記錄
         /// </summary>
-        /// <param name="SemesterScoreID">學生學期成績編號</param> 
+        /// <param name="SemesterScoreRecordID">學生學期成績編號</param> 
         /// <returns>int，傳回成功刪除的筆數。</returns>
         /// <exception cref="Exception">
         /// </exception>
@@ -653,7 +657,7 @@ namespace K12.Data
         /// <summary>
         /// 刪除多筆學生學期成績記錄
         /// </summary>
-        /// <param name="SemesterScoreIDs">多筆學生學期成績編號</param>
+        /// <param name="SemesterScoreRecordIDs">多筆學生學期成績編號</param>
         /// <returns>int，傳回成功刪除的筆數。</returns>
         /// <exception cref="Exception">
         /// </exception>
@@ -694,10 +698,19 @@ namespace K12.Data
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         static public event EventHandler<DataChangedEventArgs> AfterInsert;
 
+        /// <summary>
+        /// 
+        /// </summary>
         static public event EventHandler<DataChangedEventArgs> AfterUpdate;
 
+        /// <summary>
+        /// 
+        /// </summary>
         static public event EventHandler<DataChangedEventArgs> AfterDelete;
 
     }

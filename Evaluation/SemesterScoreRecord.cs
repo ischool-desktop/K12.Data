@@ -56,12 +56,12 @@ namespace K12.Data
         /// <summary>
         /// 所屬學生
         /// </summary>
-        public StudentRecord Student 
-        { 
-            get 
-            { 
-                return !string.IsNullOrEmpty(RefStudentID)?K12.Data.Student.SelectByID(RefStudentID):null;
-            } 
+        public StudentRecord Student
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(RefStudentID) ? K12.Data.Student.SelectByID(RefStudentID) : null;
+            }
         }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace K12.Data
         /// 所屬領域
         /// </summary>
         [Field(Caption = "領域", EntityName = "SubjectScore", EntityCaption = "科目成績")]
-        public string Domain { get; set; } 
+        public string Domain { get; set; }
         /// <summary>
         /// 科目名稱
         /// </summary>
@@ -317,10 +317,20 @@ namespace K12.Data
         [Field(Caption = "權數", EntityName = "DomainScore", EntityCaption = "領域成績")]
         public decimal? Credit { get; set; }
         /// <summary>
-        /// 百分比成績
+        /// 百分比成績，通常是擇優的成績，大部份報表都是輸出此成績。
         /// </summary>
         [Field(Caption = "成績", EntityName = "DomainScore", EntityCaption = "領域成績")]
         public decimal? Score { get; set; }
+        /// <summary>
+        /// 原始成績，由科目成績直接計算的成績。
+        /// </summary>
+        [Field(Caption = "原始成績", EntityName = "DomainScore", EntityCaption = "領域成績")]
+        public decimal? ScoreOrigin { get; set; }
+        /// <summary>
+        /// 補考成績。
+        /// </summary>
+        [Field(Caption = "補考成績", EntityName = "DomainScore", EntityCaption = "領域成績")]
+        public decimal? ScoreMakeup { get; set; }
         /// <summary>
         /// 努力程度
         /// </summary>
@@ -364,6 +374,8 @@ namespace K12.Data
             Period = K12.Data.Decimal.ParseAllowNull(domain.GetAttribute("節數"));
             Credit = K12.Data.Decimal.ParseAllowNull(domain.GetAttribute("權數"));
             Score = K12.Data.Decimal.ParseAllowNull(domain.GetAttribute("成績"));
+            ScoreOrigin = K12.Data.Decimal.ParseAllowNull(domain.GetAttribute("原始成績"));
+            ScoreMakeup = K12.Data.Decimal.ParseAllowNull(domain.GetAttribute("補考成績"));
             Effort = K12.Data.Int.ParseAllowNull(domain.GetAttribute("努力程度"));
             Text = domain.GetAttribute("文字描述");
             Comment = domain.GetAttribute("註記");
@@ -382,6 +394,8 @@ namespace K12.Data
             cloneDomainScore.Period = this.Period;
             cloneDomainScore.Credit = this.Credit;
             cloneDomainScore.Score = this.Score;
+            cloneDomainScore.ScoreOrigin = this.ScoreOrigin;
+            cloneDomainScore.ScoreMakeup = this.ScoreMakeup;
             cloneDomainScore.Effort = this.Effort;
             cloneDomainScore.Text = this.Text;
             cloneDomainScore.Comment = this.Comment;
