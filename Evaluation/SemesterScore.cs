@@ -14,7 +14,7 @@ namespace K12.Data
         private const string SELECT_SERVICENAME = "SmartSchool.Score.GetSemesterSubjectScore";
         private const string UPDATE_SERVICENAME = "SmartSchool.Score.UpdateSemesterSubjectScore";
         private const string INSERT_SERVICENAME = "SmartSchool.Score.InsertSemesterSubjectScore";
-        private const string DELET_SERVICENAME = "SmartSchool.Score.DeleteSemesterSubjectScore"; 
+        private const string DELET_SERVICENAME = "SmartSchool.Score.DeleteSemesterSubjectScore";
 
         /// <summary>
         /// 取得所有科目成績
@@ -461,6 +461,8 @@ namespace K12.Data
 
                     partialInsertHelper.AddElement("ScoreInfo", "LearnDomainScore", "" + editor.LearnDomainScore);
                     partialInsertHelper.AddElement("ScoreInfo", "CourseLearnScore", "" + editor.CourseLearnScore);
+                    partialInsertHelper.AddElement("ScoreInfo", "LearnDomainScoreOrigin", "" + editor.LearnDomainScoreOrigin);
+                    partialInsertHelper.AddElement("ScoreInfo", "CourseLearnScoreOrigin", "" + editor.CourseLearnScoreOrigin);
 
                     helper.AddElement(".", partialInsertHelper.BaseElement);
                 }
@@ -574,6 +576,8 @@ namespace K12.Data
 
                     partialUpdateHelper.AddElement("Field/ScoreInfo", "LearnDomainScore", "" + editor.LearnDomainScore);
                     partialUpdateHelper.AddElement("Field/ScoreInfo", "CourseLearnScore", "" + editor.CourseLearnScore);
+                    partialUpdateHelper.AddElement("Field/ScoreInfo", "LearnDomainScoreOrigin", "" + editor.LearnDomainScoreOrigin);
+                    partialUpdateHelper.AddElement("Field/ScoreInfo", "CourseLearnScoreOrigin", "" + editor.CourseLearnScoreOrigin);
 
                     partialUpdateHelper.AddElement("Condition");
                     partialUpdateHelper.AddElement("Condition", "ID", editor.ID);

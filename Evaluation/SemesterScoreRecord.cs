@@ -42,9 +42,18 @@ namespace K12.Data
         [Field(Caption = "課程學習成績", EntityName = "SemesterScore", EntityCaption = "學期成績")]
         public decimal? CourseLearnScore { get; set; }
         /// <summary>
+        /// 課程學習原始成績，由ischool介面所計算
+        /// </summary>
+        [Field(Caption = "課程學習原始成績", EntityName = "SemesterScore", EntityCaption = "學期成績")]
+        public decimal? CourseLearnScoreOrigin { get; set; }
+        /// <summary>
         /// 學期學習領域成績，由ischool介面所計算
         /// </summary>
-        protected internal decimal? LearnDomainScore { get; set; }
+        public decimal? LearnDomainScore { get; set; }
+        /// <summary>
+        /// 學期學習領域原始，由ischool介面所計算
+        /// </summary>
+        public decimal? LearnDomainScoreOrigin { get; set; }
         /// <summary>
         /// 學期科目成績明細
         /// </summary>
@@ -114,7 +123,9 @@ namespace K12.Data
             Semester = helper.GetInteger("Semester", 0);
             GradeYear = helper.GetInteger("GradeYear", 0);
             LearnDomainScore = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/LearnDomainScore"));
+            LearnDomainScoreOrigin = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/LearnDomainScoreOrigin"));
             CourseLearnScore = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/CourseLearnScore"));
+            CourseLearnScoreOrigin = K12.Data.Decimal.ParseAllowNull(helper.GetString("ScoreInfo/CourseLearnScoreOrigin"));
 
             Subjects = new Dictionary<string, SubjectScore>();
             foreach (var subjectElement in helper.GetElements("ScoreInfo/SemesterSubjectScoreInfo/Subject"))
@@ -331,6 +342,53 @@ namespace K12.Data
         /// </summary>
         [Field(Caption = "補考成績", EntityName = "DomainScore", EntityCaption = "領域成績")]
         public decimal? ScoreMakeup { get; set; }
+        /// <summary>
+        /// 補考的成績上限。
+        /// </summary>
+        private static decimal MakeupLimit { get { return 60; } }
+        /// <summary>
+        /// 取得「受限」後的補考成績，一般上限是60分。
+        /// </summary>
+        /// <returns></returns>
+        public decimal? ScoreMakeupLimited
+        {
+            get
+            {
+                if (ScoreMakeup.HasValue)
+                {
+                    decimal sMakeup = ScoreMakeup.Value;
+                    return sMakeup > MakeupLimit ? MakeupLimit : sMakeup;
+                }
+                else
+                    return null;
+
+            }
+        }
+
+        /// <summary>
+        /// 擇優成績。
+        /// </summary>
+        /// <param name="scoreOrigin"></param>
+        /// <param name="scoreMakeup"></param>
+        /// <returns></returns>
+        public static decimal? GetBetterScore(decimal? scoreOrigin, decimal? scoreMakeup)
+        {
+            //進行擇優…
+            decimal sOrigin = scoreOrigin.HasValue ? scoreOrigin.Value : 0;
+            decimal sMakeup = scoreMakeup.HasValue ? scoreMakeup.Value : 0;
+
+            //補考最高只能  60 分。
+            sMakeup = sMakeup > MakeupLimit ? MakeupLimit : sMakeup;
+
+            decimal? val = Math.Max(sOrigin, sMakeup);
+
+            //都沒有成績的狀況下，擇優後也是沒有成績。
+            if (!scoreOrigin.HasValue && !scoreMakeup.HasValue)
+                val = null;
+
+            return val;
+        }
+
         /// <summary>
         /// 努力程度
         /// </summary>
