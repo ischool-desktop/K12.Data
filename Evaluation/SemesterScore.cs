@@ -438,6 +438,11 @@ namespace K12.Data
                         element.SetAttribute("節數", "" + subject.Period);
                         element.SetAttribute("權數", "" + subject.Credit);
                         element.SetAttribute("成績", "" + subject.Score);
+
+                        //2015.1.27 Cloud新增
+                        element.SetAttribute("原始成績", "" + subject.ScoreOrigin);
+                        element.SetAttribute("補考成績", "" + subject.ScoreMakeup);
+
                         element.SetAttribute("努力程度", "" + subject.Effort);
                         element.SetAttribute("文字描述", "" + subject.Text);
                         element.SetAttribute("註記", "" + subject.Comment);
@@ -552,6 +557,11 @@ namespace K12.Data
                         element.SetAttribute("節數", "" + subject.Period);
                         element.SetAttribute("權數", "" + subject.Credit);
                         element.SetAttribute("成績", "" + subject.Score);
+
+                        //2015.1.27 Cloud新增
+                        element.SetAttribute("原始成績", "" + subject.ScoreOrigin);
+                        element.SetAttribute("補考成績", "" + subject.ScoreMakeup);
+
                         element.SetAttribute("努力程度", "" + subject.Effort);
                         element.SetAttribute("文字描述", "" + subject.Text);
                         element.SetAttribute("註記", "" + subject.Comment);

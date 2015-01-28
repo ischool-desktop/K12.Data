@@ -206,11 +206,60 @@ namespace K12.Data
         /// </summary>
         [Field(Caption = "權數", EntityName = "SubjectScore", EntityCaption = "科目成績")]
         public decimal? Credit { get; set; }
+
         /// <summary>
-        /// 百分比成績
+        /// 百分比成績。
         /// </summary>
         [Field(Caption = "成績", EntityName = "SubjectScore", EntityCaption = "科目成績")]
         public decimal? Score { get; set; }
+
+        /// <summary>
+        /// 原始成績。 2015.1.27 Cloud新增
+        /// </summary>
+        [Field(Caption = "原始成績", EntityName = "SubjectScore", EntityCaption = "科目成績")]
+        public decimal? ScoreOrigin { get; set; }
+
+        /// <summary>
+        /// 補考成績。 2015.1.27 Cloud新增
+        /// </summary>
+        [Field(Caption = "補考成績", EntityName = "SubjectScore", EntityCaption = "科目成績")]
+        public decimal? ScoreMakeup { get; set; }
+
+        /// <summary>
+        /// 補考的成績上限。 2015.1.27 Cloud新增
+        /// </summary>
+        private static decimal MakeupLimit { get { return 60; } }
+
+        /// <summary>
+        /// 取得「受限」後的補考成績，一般上限是60分。 2015.1.27 Cloud新增
+        /// </summary>
+        /// <returns></returns>
+        public decimal? ScoreMakeupLimited
+        {
+            get
+            {
+                if (ScoreMakeup.HasValue)
+                {
+                    decimal sMakeup = ScoreMakeup.Value;
+                    return sMakeup > MakeupLimit ? MakeupLimit : sMakeup;
+                }
+                else
+                    return null;
+
+            }
+        }
+
+        /// <summary>
+        /// 擇優成績。 2015.1.27 Cloud新增
+        /// </summary>
+        /// <param name="scoreOrigin"></param>
+        /// <param name="scoreMakeup"></param>
+        /// <returns></returns>
+        public static decimal? GetBetterScore(decimal? scoreOrigin, decimal? scoreMakeup)
+        {
+            return DomainScore.GetBetterScore(scoreOrigin, scoreMakeup);
+        }
+
         /// <summary>
         /// 努力程度
         /// </summary>
@@ -255,6 +304,11 @@ namespace K12.Data
             Period = K12.Data.Decimal.ParseAllowNull(subject.GetAttribute("節數"));
             Credit = K12.Data.Decimal.ParseAllowNull(subject.GetAttribute("權數"));
             Score = K12.Data.Decimal.ParseAllowNull(subject.GetAttribute("成績"));
+
+            //2015.1.27 Cloud新增
+            ScoreOrigin = K12.Data.Decimal.ParseAllowNull(subject.GetAttribute("原始成績"));
+            ScoreMakeup = K12.Data.Decimal.ParseAllowNull(subject.GetAttribute("補考成績"));
+
             Effort = K12.Data.Int.ParseAllowNull(subject.GetAttribute("努力程度"));
             Text = subject.GetAttribute("文字描述");
             Comment = subject.GetAttribute("註記");
@@ -277,6 +331,11 @@ namespace K12.Data
             cloneSubjectScore.Effort = this.Effort;
             cloneSubjectScore.Text = this.Text;
             cloneSubjectScore.Comment = this.Comment;
+
+            //2015.1.27 Cloud新增
+            cloneSubjectScore.ScoreOrigin = this.ScoreOrigin;
+            cloneSubjectScore.ScoreMakeup = this.ScoreMakeup;
+
             return cloneSubjectScore;
         }
 
